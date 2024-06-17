@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
+import {RouterPage} from "./router/RouterPage";
 
 function App() {
-  return (
-    <div className='text-red-500'> Test Tailwind </div>
-  );
+  return (<RouterPage />);
 }
 
 export default App;
