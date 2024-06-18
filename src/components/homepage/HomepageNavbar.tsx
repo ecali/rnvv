@@ -1,10 +1,17 @@
+import {projectName} from "../../consts/general"
+import {ColorVariant} from "../../models/props.model"
+import {CUButton} from "../shared/CUButton"
+import {Link} from "react-router-dom";
+import {getPathToNavigate} from "../../utils/navigation.utils";
+import {NavigationName} from "../../models/navigation.model";
+
 export const HomepageNavbar = () => {
     return (
-        <div className={'w-full flex justify-between h-[90px] text-gray-500'}>
-            <p className={'text-lg'}>RNVV</p>
-            <button className={'border-2 border-violet-900 rounded-lg text-violet-900'}>
-                START NOW
-            </button>
+        <div className={'w-full flex justify-between h-[70px] text-violet-900 px-4 items-center'}>
+            <p className={'text-lg text-bold '}>{projectName}</p>
+            <Link to={getPathToNavigate(NavigationName.login)}>
+                <CUButton text="Start now" variant={ColorVariant.purple}/>
+            </Link>
         </div>
     )
 }

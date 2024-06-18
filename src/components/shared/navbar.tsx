@@ -36,7 +36,7 @@ export const Navbar = (props: {children: ReactNode}) => {
                                 {NavigationItems.filter(e => e.showOnMenu).map(ele =>
                                     <Link to={ele.path} className={ele.path === location.pathname ? 'pointer-events-none' : ''}>
                                         <p key={ele.name} className={(ele.path === location.pathname ? 'text-blue-500' : '') + " px-3 py-1 flex flex-col md:flex-row md:items-center"}>
-                                            {ele.name.toUpperCase()}
+                                            {ele.name.toString().toUpperCase()}
                                         </p>
                                     </Link>
                                 )}
