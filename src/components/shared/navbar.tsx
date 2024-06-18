@@ -6,7 +6,7 @@ import {WindowsSize} from "../../consts/WindowsSize";
 
 export const Navbar = (props: {children: ReactNode}) => {
     const [showMobile, setShowMobile] = useState(false)
-    const [width, height] = useWindowSize();
+    const [width] = useWindowSize();
     const location = useLocation()
 
     useEffect(() => {
